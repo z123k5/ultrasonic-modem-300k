@@ -1,0 +1,63 @@
+|ultrasonicModem300k
+enable => fsk_out~1.OUTPUTSELECT
+enable => counter_bit[0].ENA
+enable => counter_bit[1].ENA
+enable => counter_bit[2].ENA
+enable => counter_bit[3].ENA
+enable => counter_bit[4].ENA
+enable => counter_bit[5].ENA
+enable => counter_bit[6].ENA
+enable => counter_bit[7].ENA
+clk => clk~0.IN1
+data_in => counter_bit~5.DATAB
+data_in => counter_bit~6.DATAB
+fsk_in => fsk_in~0.IN1
+fsk_out <= fsk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out <= fsk_demodulator:dem.data_out
+
+
+|ultrasonicModem300k|fsk_demodulator:dem
+clk => period_sum[15].CLK
+clk => period_sum[14].CLK
+clk => period_sum[13].CLK
+clk => period_sum[12].CLK
+clk => period_sum[11].CLK
+clk => period_sum[10].CLK
+clk => period_sum[9].CLK
+clk => period_sum[8].CLK
+clk => period_sum[7].CLK
+clk => period_sum[6].CLK
+clk => period_sum[5].CLK
+clk => period_sum[4].CLK
+clk => period_sum[3].CLK
+clk => period_sum[2].CLK
+clk => period_sum[1].CLK
+clk => period_sum[0].CLK
+clk => periods_measured[8].CLK
+clk => periods_measured[7].CLK
+clk => periods_measured[6].CLK
+clk => periods_measured[5].CLK
+clk => periods_measured[4].CLK
+clk => periods_measured[3].CLK
+clk => periods_measured[2].CLK
+clk => periods_measured[1].CLK
+clk => periods_measured[0].CLK
+clk => counter[13].CLK
+clk => counter[12].CLK
+clk => counter[11].CLK
+clk => counter[10].CLK
+clk => counter[9].CLK
+clk => counter[8].CLK
+clk => counter[7].CLK
+clk => counter[6].CLK
+clk => counter[5].CLK
+clk => counter[4].CLK
+clk => counter[3].CLK
+clk => counter[2].CLK
+clk => counter[1].CLK
+clk => counter[0].CLK
+clk => data_out~reg0.CLK
+fsk_in => ~NO_FANOUT~
+data_out <= data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

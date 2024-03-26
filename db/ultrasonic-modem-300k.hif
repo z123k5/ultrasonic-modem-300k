@@ -1,0 +1,140 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+42
+2997
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+synplcty.lmf
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+ultrasonicModem300k
+# storage
+db|ultrasonic-modem-300k.(0).cnf
+db|ultrasonic-modem-300k.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ultrasonic-modem-300k.v
+5e85ca708a77b8556d8eaa4f70775e81
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+COUNTER_MAX_BIT0
+95
+PARAMETER_SIGNED_DEC
+DEF
+COUNTER_MAX_BIT1
+89
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|altera|90sp2|quartus|lmf|synplcty.lmf
+3a364f94b4aad9feb2ad7aaf7bfa375
+# macro_sequence
+
+# end
+# entity
+fsk_demodulator
+# storage
+db|ultrasonic-modem-300k.(1).cnf
+db|ultrasonic-modem-300k.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Verilog2.v
+e568f456aa7462f20137ceb4e2f946f
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+COUNTER_MAX
+10000
+PARAMETER_SIGNED_DEC
+DEF
+PERIODS_TO_MEASURE
+2
+PARAMETER_SIGNED_DEC
+DEF
+THRESHOLD0
+160
+PARAMETER_SIGNED_DEC
+DEF
+THRESHOLD1
+186
+PARAMETER_SIGNED_DEC
+DEF
+THRESHOLD2
+97
+PARAMETER_SIGNED_DEC
+DEF
+THRESHOLD3
+103
+PARAMETER_SIGNED_DEC
+DEF
+PERIODS_NOISE
+10
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+fsk_demodulator:dem
+}
+# lmf
+..|..|..|altera|90sp2|quartus|lmf|synplcty.lmf
+3a364f94b4aad9feb2ad7aaf7bfa375
+# macro_sequence
+
+# end
+# complete
+
