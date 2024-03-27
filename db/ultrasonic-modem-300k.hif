@@ -19,55 +19,6 @@ synplcty.lmf
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-ultrasonicModem300k
-# storage
-db|ultrasonic-modem-300k.(0).cnf
-db|ultrasonic-modem-300k.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-ultrasonic-modem-300k.v
-5e85ca708a77b8556d8eaa4f70775e81
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-COUNTER_MAX_BIT0
-95
-PARAMETER_SIGNED_DEC
-DEF
-COUNTER_MAX_BIT1
-89
-PARAMETER_SIGNED_DEC
-DEF
-}
-# hierarchies {
-|
-}
-# lmf
-..|..|..|altera|90sp2|quartus|lmf|synplcty.lmf
-3a364f94b4aad9feb2ad7aaf7bfa375
-# macro_sequence
-
-# end
-# entity
 fsk_demodulator
 # storage
 db|ultrasonic-modem-300k.(1).cnf
@@ -79,7 +30,7 @@ ON
 # case_sensitive
 # source_file
 Verilog2.v
-e568f456aa7462f20137ceb4e2f946f
+a79899e34d9a54dc39a4bef6ed2b985
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -107,11 +58,11 @@ PERIODS_TO_MEASURE
 PARAMETER_SIGNED_DEC
 DEF
 THRESHOLD0
-160
+284
 PARAMETER_SIGNED_DEC
 DEF
 THRESHOLD1
-186
+300
 PARAMETER_SIGNED_DEC
 DEF
 THRESHOLD2
@@ -123,12 +74,61 @@ THRESHOLD3
 PARAMETER_SIGNED_DEC
 DEF
 PERIODS_NOISE
-10
+20
 PARAMETER_SIGNED_DEC
 DEF
 }
 # hierarchies {
 fsk_demodulator:dem
+}
+# lmf
+..|..|..|altera|90sp2|quartus|lmf|synplcty.lmf
+3a364f94b4aad9feb2ad7aaf7bfa375
+# macro_sequence
+
+# end
+# entity
+ultrasonicModem300k
+# storage
+db|ultrasonic-modem-300k.(0).cnf
+db|ultrasonic-modem-300k.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ultrasonic-modem-300k.v
+e994188c71d4234aaa2198ff2d32f
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+COUNTER_MAX_BIT0
+183
+PARAMETER_SIGNED_DEC
+DEF
+COUNTER_MAX_BIT1
+147
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+|
 }
 # lmf
 ..|..|..|altera|90sp2|quartus|lmf|synplcty.lmf

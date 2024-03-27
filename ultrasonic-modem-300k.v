@@ -1,4 +1,4 @@
-cmodule ultrasonicModem300k(
+module ultrasonicModem300k(
     input enable,       // 使能信号
     input clk,          // 输入时钟，50MHz
     input data_in,      // 输入数据
@@ -8,23 +8,23 @@ cmodule ultrasonicModem300k(
 );
 
 // 定义计数器和比较值以生成基带频率
-parameter COUNTER_MAX_BIT0 = 95;  //95 367.276 = 200MHz / 271535Hz / 2 - 1
-parameter COUNTER_MAX_BIT1 = 89; //89  // 360.000 = 200MHz / 277008Hz / 2 - 1
+parameter COUNTER_MAX_BIT0 = 183;  // 183.138 = 100MHz / 271535.2Hz / 2 - 1
+parameter COUNTER_MAX_BIT1 = 147;  // 179.500 = 100MHz / 277007.8Hz / 2 - 1
 reg [7:0] counter_bit = COUNTER_MAX_BIT0;
 reg [7:0] arr = 0;
 
 
 // 100MHz
-//reg         temp_mul;
-//assign         P = ~(clk ^ ~temp_mul);
-//always @(posedge P)
-//begin
-//	temp_mul <= ~temp_mul ;
-//end
+reg         temp_mul;
+assign         clk100 = ~(clk ^ ~temp_mul);
+always @(posedge clk100)
+begin
+	temp_mul <= ~temp_mul ;
+end
 
 // 200MHz
 //reg         clk200;
-//assign         P2 = ~(P ^ ~clk200);
+//assign         P2 = ~(clk100 ^ ~clk200);
 //always @(posedge P2)
 //begin
 //	clk200 <= ~clk200 ;
@@ -32,9 +32,9 @@ reg [7:0] arr = 0;
 
 
 fsk_demodulator dem(
-    .clk(clk),           // 时钟信号
+    .clk(clk100),           // 时钟信号
     .fsk_in(fsk_in),        // FSK调制输入
-    .data_out(data_out),  // 解调后的数据输出
+    .data_out(data_out)  // 解调后的数据输出
 );
 
 
@@ -43,7 +43,7 @@ initial begin
 end
 
 // 生成基带信号
-always @(posedge clk) begin
+always @(posedge clk100) begin
     if (enable) begin
 		counter_bit <= counter_bit - 1'b1;
 		if (counter_bit == 8'b0) begin
@@ -58,10 +58,8 @@ end
 // 根据输入数据选择相应的基带频率作为输出
 always @(*) begin
     if (data_in == 1'b0) begin
-        // fsk_out = clk_bit0;
         arr <= COUNTER_MAX_BIT0;
     end else begin
-        // fsk_out = clk_bit1;
         arr <= COUNTER_MAX_BIT1;
     end
 end

@@ -1,5 +1,5 @@
 Assembler report for ultrasonic-modem-300k
-Tue Mar 26 17:57:12 2024
+Wed Mar 27 16:51:11 2024
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Mar 26 17:57:12 2024 ;
+; Assembler Status      ; Successful - Wed Mar 27 16:51:11 2024 ;
 ; Revision Name         ; ultrasonic-modem-300k                 ;
 ; Top-level Entity Name ; ultrasonicModem300k                   ;
 ; Family                ; MAX II                                ;
@@ -89,7 +89,7 @@ applicable agreement for further details.
 +----------------+-------------------------------------------------------------------------------------+
 ; Device         ; EPM240T100C5                                                                        ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                                          ;
-; Checksum       ; 0x001859A7                                                                          ;
+; Checksum       ; 0x001858B3                                                                          ;
 +----------------+-------------------------------------------------------------------------------------+
 
 
@@ -99,14 +99,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Mar 26 17:57:11 2024
+    Info: Processing started: Wed Mar 27 16:51:11 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ultrasonic-modem-300k -c ultrasonic-modem-300k
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 202 megabytes
-    Info: Processing ended: Tue Mar 26 17:57:12 2024
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Wed Mar 27 16:51:11 2024
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

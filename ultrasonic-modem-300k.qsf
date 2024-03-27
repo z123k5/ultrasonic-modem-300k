@@ -62,3 +62,5 @@ set_global_assignment -name VERILOG_FILE "ultrasonic-modem-300k.v"
 set_global_assignment -name VERILOG_FILE Verilog2.v
 set_location_assignment PIN_35 -to data_out
 set_location_assignment PIN_73 -to fsk_in
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to fsk_in
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to fsk_out

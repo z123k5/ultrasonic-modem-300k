@@ -81,7 +81,7 @@ clk                          : 12        : input  : 3.3-V LVTTL       :         
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 14        :        :                   :         : 1         :                
 data_in                      : 15        : input  : 3.3-V LVTTL       :         : 1         : Y              
-fsk_out                      : 16        : output : 3.3-V LVTTL       :         : 1         : Y              
+fsk_out                      : 16        : output : 3.3-V LVCMOS      :         : 1         : Y              
 enable                       : 17        : input  : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 18        :        :                   :         : 1         :                
 GND*                         : 19        :        :                   :         : 1         :                
@@ -138,7 +138,7 @@ GND*                         : 69        :        :                   :         
 GND*                         : 70        :        :                   :         : 2         :                
 GND*                         : 71        :        :                   :         : 2         :                
 GND*                         : 72        :        :                   :         : 2         :                
-fsk_in                       : 73        : input  : 3.3-V LVTTL       :         : 2         : Y              
+fsk_in                       : 73        : input  : 3.3V Schmitt Trigger Input :         : 2         : Y              
 GND*                         : 74        :        :                   :         : 2         :                
 GND*                         : 75        :        :                   :         : 2         :                
 GND*                         : 76        :        :                   :         : 2         :                

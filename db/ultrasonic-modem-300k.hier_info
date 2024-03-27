@@ -8,15 +8,16 @@ enable => counter_bit[4].ENA
 enable => counter_bit[5].ENA
 enable => counter_bit[6].ENA
 enable => counter_bit[7].ENA
-clk => clk~0.IN1
+clk => clk100~0.IN1
+data_in => counter_bit~2.DATAB
 data_in => counter_bit~5.DATAB
-data_in => counter_bit~6.DATAB
 fsk_in => fsk_in~0.IN1
 fsk_out <= fsk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out <= fsk_demodulator:dem.data_out
 
 
 |ultrasonicModem300k|fsk_demodulator:dem
+clk => fsk_in_last.CLK
 clk => period_sum[15].CLK
 clk => period_sum[14].CLK
 clk => period_sum[13].CLK
@@ -57,7 +58,8 @@ clk => counter[2].CLK
 clk => counter[1].CLK
 clk => counter[0].CLK
 clk => data_out~reg0.CLK
-fsk_in => ~NO_FANOUT~
+fsk_in => fsk_in_last.DATAIN
+fsk_in => always0~0.IN1
 data_out <= data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
